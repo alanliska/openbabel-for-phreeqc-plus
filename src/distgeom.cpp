@@ -529,10 +529,10 @@ namespace OpenBabel {
 
               float lBounds = _d->GetLowerBounds(a->GetIdx() - 1, d->GetIdx() - 1) + DIST14_TOL;
               float uBounds = _d->GetUpperBounds(a->GetIdx() - 1, d->GetIdx() - 1) - DIST14_TOL;
-              if (ct->IsTrans(a->GetId(), d->GetId())) {
+              if (ct->IsTrans(a, d)) {
                 // lower bounds should be trans (current upper bounds)
                 _d->SetLowerBounds(a->GetIdx() - 1, d->GetIdx() - 1, uBounds - DIST14_TOL);
-              } else if (ct->IsCis(a->GetId(), d->GetId())) {
+              } else if (ct->IsCis(a, d)) {
                 // upper bounds should be cis (current lower bounds)
                 _d->SetUpperBounds(a->GetIdx() - 1, d->GetIdx() - 1, lBounds + DIST14_TOL);
               }

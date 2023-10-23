@@ -6,6 +6,30 @@ Open Babel
 [![Travis CI](https://img.shields.io/travis/openbabel/openbabel.svg)](https://travis-ci.org/openbabel/openbabel)
 [![Google Scholar Citations](https://openbabel.org/citations.svg?maxAge=86400)](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13319995025871922899&as_sdt=5)
 
+#### This is the OpenBABEL fork used in the mobile app PHREEQC plus ####
+
+# Changes in this fork #
+
+* no changes in the code
+
+# Compilation #
+
+* arm
+cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/armv7a-linux-androideabi33-clang -DCMAKE_CXX_COMPILER=/path/to/armv7a-linux-androideabi33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+
+* aarch64
+cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/aarch64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/aarch64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+
+* x86
+cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/i686-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/i686-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+
+* x86_64
+cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/x86_64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/x86_64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+
+make install
+
+####
+
 Open Babel is a chemical toolbox designed to speak the many languages
 of chemical data. It's an open, collaborative project allowing anyone
 to search, convert, analyze, or store data from molecular modeling,
