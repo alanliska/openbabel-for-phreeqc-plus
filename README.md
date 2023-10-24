@@ -1,21 +1,15 @@
-Open Babel
-----------
+# This is the OpenBABEL fork used in the mobile app PHREEQC plus
 
-[![GitHub release](https://img.shields.io/github/release/openbabel/openbabel.svg?maxAge=86400)](https://github.com/openbabel/openbabel/releases)
-[![Download Open Babel](https://img.shields.io/sourceforge/dt/openbabel.svg?maxAge=86400)](https://github.com/openbabel/openbabel/releases)
-[![Travis CI](https://img.shields.io/travis/openbabel/openbabel.svg)](https://travis-ci.org/openbabel/openbabel)
-[![Google Scholar Citations](https://openbabel.org/citations.svg?maxAge=86400)](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13319995025871922899&as_sdt=5)
-
-#### This is the OpenBABEL fork used in the mobile app PHREEQC plus ####
-
-# Changes in this fork #
+## Changes in this fork
 
 * no changes in the code
 
-# Compilation #
+## Compilation
 
 * arm
-cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/armv7a-linux-androideabi33-clang -DCMAKE_CXX_COMPILER=/path/to/armv7a-linux-androideabi33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```bash
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/armv7a-linux-androideabi33-clang -DCMAKE_CXX_COMPILER=/path/to/armv7a-linux-androideabi33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```
 
 * aarch64
 cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/aarch64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/aarch64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
@@ -28,7 +22,15 @@ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_O
 
 make install
 
-####
+# ORIGINAL DESCRIPTION:
+
+Open Babel
+----------
+
+[![GitHub release](https://img.shields.io/github/release/openbabel/openbabel.svg?maxAge=86400)](https://github.com/openbabel/openbabel/releases)
+[![Download Open Babel](https://img.shields.io/sourceforge/dt/openbabel.svg?maxAge=86400)](https://github.com/openbabel/openbabel/releases)
+[![Travis CI](https://img.shields.io/travis/openbabel/openbabel.svg)](https://travis-ci.org/openbabel/openbabel)
+[![Google Scholar Citations](https://openbabel.org/citations.svg?maxAge=86400)](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13319995025871922899&as_sdt=5)
 
 Open Babel is a chemical toolbox designed to speak the many languages
 of chemical data. It's an open, collaborative project allowing anyone
