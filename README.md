@@ -12,15 +12,23 @@ $ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE
 ```
 
 * aarch64
-cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/aarch64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/aarch64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```bash
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/aarch64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/aarch64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```
 
 * x86
-cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/i686-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/i686-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```bash
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/i686-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/i686-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```
 
 * x86_64
-cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/x86_64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/x86_64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```bash
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/x86_64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/x86_64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+```
 
-make install
+```bash
+$ make install
+```
 
 # ORIGINAL DESCRIPTION:
 
