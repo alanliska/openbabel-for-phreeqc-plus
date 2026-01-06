@@ -8,23 +8,25 @@
 
 * arm
 ```bash
-$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/armv7a-linux-androideabi33-clang -DCMAKE_CXX_COMPILER=/path/to/armv7a-linux-androideabi33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/armv7a-linux-androideabi34-clang -DCMAKE_CXX_COMPILER=/path/to/armv7a-linux-androideabi34-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++ -Wl,-z,max-page-size=16384"
 ```
 
 * aarch64
 ```bash
-$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/aarch64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/aarch64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/aarch64-linux-android34-clang -DCMAKE_CXX_COMPILER=/path/to/aarch64-linux-android34-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++ -Wl,-z,max-page-size=16384"
 ```
 
 * x86
 ```bash
-$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/i686-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/i686-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/i686-linux-android34-clang -DCMAKE_CXX_COMPILER=/path/to/i686-linux-android34-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++ -Wl,-z,max-page-size=16384"
 ```
 
 * x86_64
 ```bash
-$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/x86_64-linux-android33-clang -DCMAKE_CXX_COMPILER=/path/to/x86_64-linux-android33-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++"
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/installation/path -DBUILD_SHARED=OFF -DENABLE_OPENMP=OFF -DCMAKE_C_COMPILER=/path/to/x86_64-linux-android34-clang -DCMAKE_CXX_COMPILER=/path/to/x86_64-linux-android34-clang++ -DCMAKE_EXE_LINKER_FLAGS="-static-libstdc++ -Wl,-z,max-page-size=16384"
 ```
+
+In tools/CMakeFiles/obabel.dir/link.txt delete -lPTHREAD_LIBRARY-NOTFOUND -Wl,-Bstatic and -rdynamic. 
 
 ```bash
 $ make install
